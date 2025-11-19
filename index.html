@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Museum — Modern Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">The Museum</p>
+        <h1>Classic craft, modern ease.</h1>
+        <p>
+          Reserve a chair at Lisbon's most curated barbershop. Seamlessly book a
+          haircut or full grooming ritual in just a few taps.
+        </p>
+        <a href="#booking" class="cta">Book a seat</a>
+      </div>
+      <div class="hero__card">
+        <p class="hero__card-label">Today's curations</p>
+        <ul>
+          <li>
+            <span>Single Malt Fade</span>
+            <span>14:00</span>
+          </li>
+          <li>
+            <span>Gallery Taper</span>
+            <span>16:30</span>
+          </li>
+          <li>
+            <span>Curator's Combo</span>
+            <span>18:00</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="booking" class="booking">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Plan your visit</p>
+            <h2>Book this month's schedule</h2>
+          </div>
+          <p class="panel__hint">Choose a ritual, pick your day, confirm your seat.</p>
+        </div>
+
+        <div class="options">
+          <button class="option is-active" data-service="hair">
+            Haircut · 30 min
+          </button>
+          <button class="option" data-service="combo">
+            Hair + Beard · 60 min
+          </button>
+        </div>
+
+        <div class="calendar">
+          <div class="calendar__nav">
+            <button
+              id="prevMonth"
+              class="calendar__nav-btn"
+              aria-label="Previous month"
+              type="button"
+            >
+              ‹
+            </button>
+            <p id="monthLabel" class="month-label"></p>
+            <button
+              id="nextMonth"
+              class="calendar__nav-btn"
+              aria-label="Next month"
+              type="button"
+            >
+              ›
+            </button>
+          </div>
+          <div class="calendar__weekdays" id="calendarWeekdays"></div>
+          <div class="calendar__grid" id="calendar"></div>
+        </div>
+
+        <div class="slots">
+          <p class="slots__title">Available slots</p>
+          <div id="slotsContainer" class="slots__grid"></div>
+        </div>
+
+        <div class="confirmation" id="confirmation"></div>
+      </section>
+
+      <aside class="details">
+        <h3>What's included</h3>
+        <ul>
+          <li>Complimentary espresso & curated vinyl playlist.</li>
+          <li>Hot towel finish with bespoke Museum grooming line.</li>
+          <li>Digital receipts and reminders 24h ahead of time.</li>
+        </ul>
+
+        <div class="summary">
+          <h4>Upcoming reservations</h4>
+          <ul id="reservationList"></ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> The Museum Barbershop · Rua do Tempo 17, Lisboa</p>
+      <p>Need help? <a href="mailto:hello@themuseum.barber">hello@themuseum.barber</a></p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
